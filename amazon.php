@@ -27,16 +27,16 @@ foreach($html->find('.s-result-item') as $postDiv){
 	$price=getPrice($postDiv);
 	$src=getImgUrl($postDiv);
 	insertData($asin,$title,$price,$src,$conn);
-	echo $asin."::".$title."::". "Rs." .$price."::" .$src. '<br>';
+/* 	echo $asin."::".$title."::". "Rs." .$price."::" .$src. '<br>'; */
 	$count++;
 	// Break from inner loop if count is reached
 	if($limit==$count)
 		break;
 }
 
-	echo "<center>";
+/* 	echo "<center>";
 	echo "--------------------------".$count."-------------------------------".'<br><br><bt>';
-	echo "<center>";
+	echo "<center>"; */
 
 	// Break from outer loop if count is reached
 if($limit==$count)
@@ -45,7 +45,7 @@ if($limit==$count)
 	$html->clear(); 
 	unset($html);
 if(($webSiteUrl)){
-	echo $webSiteUrl.'<br>';
+	//echo $webSiteUrl.'<br>';
 	$html = file_get_html($webSiteUrl);	
 	}
  }

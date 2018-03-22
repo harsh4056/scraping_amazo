@@ -62,11 +62,12 @@ else {
 }
 
 function deleteData($conn){
-	$sql = "TRUNCATE TABLE `scrape_test`";
+	$table='scrape_test';
+	$truncate_query = 'TRUNCATE TABLE  `' . $table .'`';
 
 if (mysqli_query($conn, $sql)) {} 
 else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $truncate_query . "<br>" . mysqli_error($conn);
 }
 }
 
